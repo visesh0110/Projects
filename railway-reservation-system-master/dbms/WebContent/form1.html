@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Registration</title>
+	<link rel="stylesheet" type="text/css" href="mystylesheet.css">
+</head>
+<body>
+<h1>Indian Railways</h1>
+<center><img src="images/rail.jpg" alt = "logo" width="150" height="150"></center>	
+<form action="UserRegistration" method="post">
+	<fieldset>
+		<legend>Registration Information</legend>
+	<label>Email ID:</label> <input type="text" name="emailid" align="right"><br>
+	<label>Password:</label> <input type="password" name="password" align="right"><br>
+	<label>Confirm Password:</label> <input type="password" name="confirm_password" align="right"><br>
+	<label>FullName:</label> <input type="text" name="fullname" align="right"><br>
+	<label>Gender:</label> <select name="gender" align="right">
+				<option value="female">female</option>
+				<option value="male">male</option>
+			</select><br>
+	<label>Age:</label> <input type="text" name="age"><br>
+	<label>Mobile Number:</label> <input type="text" name="mobile"><br>
+	</fieldset>
+	<fieldset>
+		<legend>Residential Address</legend>
+	<label>City:</label> <input type="text" name="city"><br>
+	<label>State:</label> <select name="state">
+				<option value="AN">Andaman and Nicobar Islands</option>
+				<option value="AP">Andhra Pradesh</option>
+				<option value="ARP">Arunchal Pradesh</option>
+				<option value="AS">Assam</option>
+				<option value="BH">Bihar</option>
+				<option value="CH">Chandigarh</option>
+				<option value="CHT">Chattisgarh</option>
+				<option value="DH">Dadra and Nagar Haveli</option>
+				<option value="DD">Daman and Diu</option>
+				<option value="DL">New Delhi</option>
+				<option value="GA">Goa</option>
+				<option value="GJ">Gujarat</option>
+				<option value="HR">Haryana</option>
+				<option value="HP">Himachal Pradesh</option>
+				<option value="JK">Jammu and Kashmir</option>
+				<option value="JH">Jharkhand</option>
+				<option value="KA">Karnataka</option>
+				<option value="KL">Kerala</option>
+				<option value="LK">Lakshadweep</option>
+				<option value="MP">Madhya Pradesh</option>
+				<option value="MH">Maharashtra</option>
+				<option value="MN">Manipur</option>
+				<option value="ME">Meghalaya</option>
+				<option value="MZ">Mizoram</option>
+				<option value="NG">Nagaland</option>
+				<option value="OR">Orissa</option>
+				<option value="PU">Puducherry</option>
+				<option value="PJ">Punjab</option>
+				<option value="RJ">Rajasthan</option>
+				<option value="SK">Sikkim</option>
+				<option value="TN">Tamil Nadu</option>
+				<option value="TL">Telangana</option>
+				<option value="TR">Tripura</option>
+				<option value="UP">Uttar Pradesh</option>
+				<option value="UT">Uttarakhand</option>
+				<option value="WB">West Bengal</option>
+		   </select><br>
+	<label>Nationality:</label>
+	<select name="nationality">
+	<option value="AFG">Afghanistan</option>
+	<option value="ATA">Antarctica</option>
+	<option value="AUS">Australia</option>
+	<option value="BHR">Bahrain</option>
+	<option value="BGD">Bangladesh</option>
+	<option value="BTN">Bhutan</option>
+	<option value="BRA">Brazil</option>
+	<option value="CAN">Canada</option>
+	<option value="CHN">China</option>
+	<option value="DNK">Denmark</option>
+	<option value="EGY">Egypt</option>
+	<option value="FRA">France</option>
+	<option value="DEU">Germany</option>
+	<option value="HKG">Hong Kong</option>
+	<option value="HUN">Hungary</option>
+	<option value="ISL">Iceland</option>
+	<option value="IND">India</option>
+	<option value="IDN">Indonesia</option>
+	<option value="IRN">Iran, Islamic Republic of</option>
+	<option value="IRQ">Iraq</option>
+	<option value="IRL">Ireland</option>
+	<option value="IMN">Isle of Man</option>
+	<option value="ISR">Israel</option>
+	<option value="ITA">Italy</option>
+	<option value="JAM">Jamaica</option>
+	<option value="JPN">Japan</option>
+	<option value="JEY">Jersey</option>
+	<option value="JOR">Jordan</option>
+	<option value="KAZ">Kazakhstan</option>
+	<option value="KEN">Kenya</option>
+	<option value="KIR">Kiribati</option>
+	<option value="PRK">Korea, Democratic People's Republic of</option>
+	<option value="KOR">Korea, Republic of</option>
+	<option value="KWT">Kuwait</option>
+	<option value="KGZ">Kyrgyzstan</option>
+	<option value="LBY">Libya</option>
+	<option value="MYS">Malaysia</option>
+	<option value="MDV">Maldives</option>
+	<option value="MEX">Mexico</option>
+	<option value="MMR">Myanmar</option>
+	<option value="NPL">Nepal</option>
+	<option value="NLD">Netherlands</option>
+	<option value="NZL">New Zealand</option>
+	<option value="NGA">Nigeria</option>
+	<option value="NOR">Norway</option>
+	<option value="OMN">Oman</option>
+	<option value="PAK">Pakistan</option>
+	<option value="QAT">Qatar</option>
+	<option value="RUS">Russian Federation</option>
+	<option value="SGP">Singapore</option>
+	<option value="ESP">Spain</option>
+	<option value="LKA">Sri Lanka</option>
+	<option value="SWE">Sweden</option>
+	<option value="CHE">Switzerland</option>
+	<option value="THA">Thailand</option>
+	<option value="UGA">Uganda</option>
+	<option value="UKR">Ukraine</option>
+	<option value="ARE">United Arab Emirates</option>
+	<option value="GBR">United Kingdom</option>
+	<option value="USA">United States</option>
+	<option value="URY">Uruguay</option>
+	<option value="UZB">Uzbekistan</option>
+	<option value="VEN">Venezuela, Bolivarian Republic of</option>
+	<option value="VNM">VietNam</option>
+	<option value="VGB">Virgin Islands, British</option>
+	<option value="YEM">Yemen</option>
+	<option value="ZWE">Zimbabwe</option>
+</select><br>
+	<label>Select your Secret Question:</label> 
+	<select name="secret_question">
+		<option value="q1">What was your first vehicle number?</option>
+		<option value="q2">What is your favourite colour?</option>
+		<option value="q3">What is your mother's name?</option>
+	</select><br>
+	<label>Security Answer to above question:</label> <input type="text" name="security_answer"><br>
+	</fieldset>
+	<button type="register">Register</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button type="reset" >Cancel</button>
+</form>
+
+</body>
+</html>

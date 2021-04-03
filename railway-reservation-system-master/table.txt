@@ -1,0 +1,26 @@
+Create table Station(Station_ID int not null, Station_Name varchar(25), primary key(Station_ID) );
+
+create table Train (Train_ID int not null, Train_name varchar(50) not null, Train_type varchar(50) not null, Source_stn varchar(30) null, Destination_stn varchar(30) null, Source_ID int null, Destination_ID int null, primary key(Train_ID), foreign key(Source_ID) references Station(Station_ID) on update cascade on delete cascade, foreign key (Destination_ID) references Station(Station_ID) on update no action on delete no action);
+
+
+create table Train_class (Train_ID int not null, Fare_Class1 int not null, Seat_Class1 int not null, Fare_Class2 int not null, Seat_Class2 int not null,Fare_Class3 int not null, Seat_Class3 int not null, primary key(Train_ID)) ;
+
+Create table Days_Available(Train_ID int not null, Available_days varchar(20), primary key(Train_ID));
+
+create table Passenger ( PNR varchar(25) not null, Seat_number int not null, Passenger_name varchar(30) not null, Age int not null, Gender varchar(8) not null, Train_ID int not null,foreign key(Train_ID) references Train(Train_ID) on update cascade on delete cascade, primary key(PNR, Seat_number) );
+
+create table Passenger_ticket ( PNR varchar(25) not null, Source_ID varchar(8) not null, Destination_ID varchar(8) not null, Class_type varchar(50) not null, Reservation_status varchar(25) not null, Train_ID int not null,foreign key(Train_ID) references Train(Train_ID) on update cascade on delete cascade, primary key(PNR) ) ;
+
+
+
+create table Train_status(Train_ID int not null, Available_Date varchar(20) not null, Booked_seats3 int null, Waiting_seats3 int null, Available_seats3 int null, primary key(Train_ID,Available_Date), foreign key(Train_ID) references Train(Train_ID) on update cascade on delete cascade);
+
+create table Reservation (Train_ID int not null, Available_Date varchar(20) not null, EmailID varchar(30) not null, PNR varchar(20) not null, Reservation_Date text not null, Reservation_Status varchar(20) null, foreign key(Train_ID,Available_Date) references Train_status(Train_ID,Available_Date) on update cascade on delete cascade, foreign key(EmailID) references user(email_id) on update cascade on delete cascade, primary key(Train_ID,Available_Date,EmailID,PNR) );
+
+create table Route (Train_ID int not null, Stop_number int not null, Station_ID varchar(8) not null , Arrival_time text not null, Departure_time text not null, Source_distance int not null, primary key(Train_ID,Stop_number), foreign key(Train_ID) references Train(Train_ID) on update cascade on delete cascade);
+
+create table Route_HAS_Station (Train_ID int not null,Station_ID varchar(20) not null, Stop_number int not null, primary key(Train_ID, Station_ID));
+
+Create table user( email_id varchar(30) not null, password varchar(30) not null, full_name varchar(30) not null, gender varchar(30) not null, age varchar(30)  not null, mobile varchar(30) not null, city varchar(30) not null, state varchar(30) not null, nationality varchar(30),security_question varchar(30) not null, security_answer varchar(30) not null );
+
+create table Admin_table (User_ID varchar(20) not null, Password varchar(15) not null, primary key(User_ID));

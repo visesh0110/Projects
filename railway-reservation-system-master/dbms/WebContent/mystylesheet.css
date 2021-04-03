@@ -1,0 +1,37 @@
+body{
+	background-color: #FFDAB9;
+}
+
+h1{
+	color: blue;
+    text-align: center;
+    
+}
+
+form{
+ 	margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    text-align:center;
+    
+}
+a{
+    line-height: 200%;
+    color: green;
+}
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+input {
+  display: inline-block;
+  float: left;
+}
+select{
+	 display: inline-block;
+  	 float: left;
+}

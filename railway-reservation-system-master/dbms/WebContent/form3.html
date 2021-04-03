@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Train</title>
+	<link rel="stylesheet" type="text/css" href="mystylesheet.css">
+</head>
+<body>
+<h1>Indian Railways</h1>
+<center><img src="images/rail.jpg" alt = "logo" width="150" height="150"></center>	
+<form action="AddTrain" method="post">
+	<a target="_blank" href="form3.html">Add Train</a><br>
+	<a target="_blank" href="form4.html" >Add Station</a><br>
+	<a target="_blank" href="form5.html">Add Route</a><br>
+
+	<fieldset>
+	<legend>Train Details</legend>
+	<label>Train ID:</label> <input type="text" name="train_id"><br>
+	<label>Train Name:</label> <input type="text" name="train_name"><br>
+	<label>Train Type:</label>
+	<select name="train_type">
+		<option value="Exp">Express</option>
+		<option value="Shb">Shatabdi</option>
+		<option value="Raj">Rajdhani</option>
+		<option value="Sec">Second Class</option>
+	</select><br>
+	<label>Source Station:</label> <input type="text" name="source_stn"><br>
+	<label>Source Station ID:</label> <input type="text" name="source_id"><br>
+	<label>Destination Station:</label> <input type="text" name="destination_stn"><br>
+	<label>Destination Station ID:</label> <input type="text" name="destination_id"><br>
+	<label>Available Day:</label><br>
+	<input type="radio" name="Sun" value="1"><label>Sunday</label><br>
+	<input type="radio" name="Mon" value="1"><label>Monday</label><br>
+	<input type="radio" name="Tue" value="1"><label>Tuesday</label><br>
+	<input type="radio" name="Wed" value="1"><label>Wednesday</label><br>
+	<input type="radio" name="Thur" value="1"><label>Thursday</label><br>
+	<input type="radio" name="Fri"  value="1"><label>Friday</label><br>
+	<input type="radio" name="Sat" value="1"><label>Saturday</label><br>
+	<label>Available Date:</label> <input type="text" name="available_date"><br>
+	<label>                       Class Fare                         Total number of seats</label><br>
+			<label>1</label> 	<input type="text" name="fare1">   <input type="text" name="available_seat1"><br>
+			<label>2</label> 	<input type="text" name="fare2">   <input type="text" name="available_seat2"><br>
+			<label>3</label> 	<input type="text" name="fare3">   <input type="text" name="available_seat3"><br>
+</fieldset>
+	  <button type="submit">Submit</button>
+	  <button type="reset">Cancel</button>
+	  <button type="button" on click="form4.html">Update</button><br>
+
+</form>
+</body>
+</html>
